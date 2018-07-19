@@ -23,10 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = 'p4+zzd&z9t-@z3k3z&9^wy4_n$v9bhq=0a*h#90_==vtpxi-x9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
+DEBUG = False
+ALLOWED_HOSTS = ['cheaplotsforsale.herokuapp.com', '.cheap.com']
 
 # Application definition
 
