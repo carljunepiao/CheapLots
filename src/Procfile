@@ -1,1 +1,1 @@
-web: gunicorn cheaplotsforsale.wsgi
+web: gunicorn cheaplotsforsale.wsgi --log-file -

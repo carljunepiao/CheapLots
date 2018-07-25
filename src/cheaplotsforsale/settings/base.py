@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = 'p4+zzd&z9t-@z3k3z&9^wy4_n$v9bhq=0a*h#90_==vtpxi-x9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['cheaplotsforsale.herokuapp.com', '.cheap.com']
 
 
@@ -117,15 +117,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-CORS_REPLACE_HTTPS_REFERER = False
-HOST_SCHEME = "http://"
-SECURE_PROXY_SSL_HEADER = None
-SECURE_SSL_REDIRECT = False
-SESSION_COOKIE_SECURE = False
-CSRF_COOKIE_SECURE = False
-SECURE_HSTS_SECONDS = None
-SECURE_HSTS_INCLUDE_SUBDOMAINS = False
-SECURE_FRAME_DENY = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
@@ -137,3 +128,13 @@ if DEBUG:
     STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "static-only")
     MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
     STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR), "static", "static"),)
+    STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+    CORS_REPLACE_HTTPS_REFERER = False
+    HOST_SCHEME = "http://"
+    SECURE_PROXY_SSL_HEADER = None
+    SECURE_SSL_REDIRECT = False
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
+    SECURE_HSTS_SECONDS = None
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+    SECURE_FRAME_DENY = False
